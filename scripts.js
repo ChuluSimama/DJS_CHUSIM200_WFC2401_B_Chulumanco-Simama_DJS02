@@ -7,7 +7,6 @@ form.addEventListener("submit", (event) => {
   const dividend = parseFloat(entries.get("dividend"));
   const divider = parseFloat(entries.get("divider"));
 
-
   const divisionResult = dividend / divider;
   if (Number.isInteger(divisionResult)) {
     result.innerText = divisionResult;
@@ -15,4 +14,8 @@ form.addEventListener("submit", (event) => {
     showError("Division result is not a whole number.");
   }
 
+  if (isNaN(dividend) || isNaN(divider)) {
+    showError("Please enter valid numbers.");
+    return;
+  }
 });
