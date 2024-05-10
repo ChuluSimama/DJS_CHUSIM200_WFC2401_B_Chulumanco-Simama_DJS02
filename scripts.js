@@ -18,4 +18,9 @@ form.addEventListener("submit", (event) => {
     showError("Please enter valid numbers.");
     return;
   }
+
+   if (divider === 0) {
+     showError("Division by zero is not allowed.");
+     return;
+   }
 });
