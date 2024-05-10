@@ -24,3 +24,7 @@ form.addEventListener("submit", (event) => {
      return;
    }
 });
+
+function showError(message) {
+  result.innerText = message;
+}
